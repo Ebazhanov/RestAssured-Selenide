@@ -1,0 +1,47 @@
+
+group 'io.agilestacks'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'io.qameta.allure'
+apply plugin: 'java'
+
+allure {
+    autoconfigure = true
+    version = '2.7.0'
+    aspectjweaver = true
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.5"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile 'io.rest-assured:rest-assured:3.2.0'
+    compile 'io.rest-assured:json-path:3.0.5'
+    compile 'io.rest-assured:json-schema-validator:3.0.5'
+    compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0'
+    compile group: 'org.testng', name: 'testng', version: '6.14.3'
+    compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.0.0'
+    compile group: 'com.codeborne', name: 'selenide', version: '5.0.1'
+    testCompile group: 'org.slf4j', name: 'slf4j-nop', version: '1.8.0-beta2'
+    compile group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.7.0'
+    compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.7.0'
+
+}
+
+test {
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
+}
