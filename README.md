@@ -35,8 +35,5 @@ Execute command
 to run test ```gradle clean test```
 to generate report ```gradle allureServe```
 
-The appropriate task will start (it starts SearchTest class) and the result you can find in the build/reports folder.
-'Reports' folder contains snapshots and test report with all information about test statuses ('index.html').
-
-**The next list of technologies**: Java 8, Gradle, TestNG, Rest-assured, Selenium, WebDriverManager, PageObject
+**List of technologies**: Java 8, Gradle, TestNG, Rest-assured, Selenium, WebDriverManager, PageObject
 **Note**: You should have installed Chrome browser, Gradle.
