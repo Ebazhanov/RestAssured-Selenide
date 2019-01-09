@@ -33,7 +33,7 @@ It should look something like *vj4fu5gfvyk42fyvq64jiikq*
 ## Instructions how to run:
 Execute command 
 to run test ```gradle clean test```
-to generate report ```gradle allureServe```
+to generate report ```gradle allureReport, gradle allureServe```
 
 **List of technologies**: Java 8, Gradle, TestNG, Rest-assured, Selenium, WebDriverManager, PageObject
 **Note**: You should have installed Chrome browser, Gradle.
